@@ -1,8 +1,18 @@
+# MUSIC APP
+
+Find information about your artist, band.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+Create your account in Discogs and get your Personal Token: https://www.discogs.com/
+
+Put your personal token in a file call: .env.local
+
+`NEXT_PUBLIC_DISCOGS_PERSONAL_TOKEN=<your token>`
+
+Run the development server:
 
 ```bash
 npm run dev
