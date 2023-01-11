@@ -10,8 +10,8 @@ interface LayoutProps {
 
 export default function Layout(props: LayoutProps) {
   return (
-    <div className="min-h-screen bg-gray-100">
-        <div className='isolate bg-white'>
+    <div className="flex min-h-screen bg-gray-100 justify-between">
+        <div className='bg-white'>
             <Meta />
             <Header />
             <main>

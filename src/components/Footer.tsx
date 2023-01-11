@@ -1,7 +1,7 @@
 export default function Footer() {
     return (
-      <footer className="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8">
-        <div className="pb-10">
+      <footer className="sticky top-[100vh]">
+        <div className="pb-10 text-center">
           <img
             className="mx-auto h-14"
             src="/music-app.png"

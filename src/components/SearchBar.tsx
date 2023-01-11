@@ -4,6 +4,15 @@ import { useState } from "react";
 export default function SearchBar() {
     const [query, setQuery] = useState("")
 
+    function sendSearch() {
+        router.push({
+            pathname: '/results',
+            query: {
+                q: query
+            }
+        })
+    }
+
     return (
         <div className="relative">
             <div className="absolute inset-y-0 flex items-center pl-3 pointer-events-none">
@@ -29,14 +38,7 @@ export default function SearchBar() {
                 onChange={e => setQuery(e.target.value)}
                 onKeyDown={(e) => {
                     if (e.key === 'Enter') {
-                        {
-                            router.push({
-                                pathname: '/results',
-                                query: {
-                                    q: query
-                                }
-                            })
-                        }
+                        {sendSearch()}
                     }
                 }}
             ></input>
