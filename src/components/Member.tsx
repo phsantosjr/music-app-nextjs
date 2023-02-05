@@ -1,15 +1,29 @@
+import { useEffect, useState } from "react"
+
 interface MemberProps {
+    id: number
     name: string
     active: boolean
-    thumbnail: string
+    thumbnail_url?: string
 }
 
-export default function Member(props: MemberProps) {
+
+export default function Member(member: MemberProps) {
+
+    const [profile, setProfile] = useState({})
+    useEffect(() => {
+        setProfile(member)
+    })
+    
+
     return (
-        <div className="flex flex-wrap p-1 md:p-2">
-            <img alt="gallery" 
-                className="block object-cover object-center w-20 h-20 rounded-lg"
-                src={props.thumbnail} />
+        <div className="p-1 md:p-2">
+            <h4 className="text-green-700">{profile.name}</h4>
+            {profile.thumbnail_url && 
+            <img alt={profile.name} 
+                className="block object-cover object-center w-40 h-40 rounded-lg"
+                src={profile.thumbnail_url} />
+            }
         </div>
     )
 }

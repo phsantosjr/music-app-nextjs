@@ -1,6 +1,11 @@
 # MUSIC APP
 
-Find information about your artist, band.
+![](https://img.shields.io/badge/NextJs-13.1.1-blue.svg)
+![](https://img.shields.io/badge/ReactJs-18.2.0-blue.svg)
+![](https://img.shields.io/badge/TypeScript-4.9.4-blue.svg)
+![](https://img.shields.io/badge/TailwindCss-3.2.4-blue.svg)
+
+Find information about your favorite artist or band.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

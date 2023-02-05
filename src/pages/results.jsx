@@ -9,12 +9,7 @@ import { useEffect, useState } from 'react'
 
 export async function getServerSideProps(context) {
     const q = context.query.q
-    const defaultOptions = {
-        headers: {
-            'Authorization': 'Discogs token=' + process.env.NEXT_PUBLIC_DISCOGS_PERSONAL_TOKEN,
-        },
-    };
-    const response = await fetch(process.env.discogs_api + "/database/search?type=artist&q=" + q, defaultOptions);
+    const response = await fetch(process.env.discogs_api + "/database/search?type=artist&q=" + q, process.env.discogs_api_headers);
     const data = await response.json();
 
     return {
@@ -33,7 +28,7 @@ export default function Results({ data, q }) {
                         <Card id={result.id} name={result.title} image={result.cover_image} />
                     </Link>
                 )
-                })
+            })
             )
         };
         getData();   
